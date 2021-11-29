@@ -1,0 +1,29 @@
+﻿<Window x:Class="Store.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Store"
+        mc:Ignorable="d"
+        Title="Store" Height="800" Width="800">
+    <Window.Resources>
+        <ResourceDictionary Source="Style.xaml" />
+    </Window.Resources>
+
+    <DockPanel LastChildFill="True">
+        <StackPanel DockPanel.Dock="Top"  Orientation="Horizontal">
+            <Button Content="Магазин"/>
+            <Button x:Name="Button_Basket" Content="Корзина" Click="Button_Basket_Click"/>
+            <Button Content="Авторизоваться"/>
+            <Button x:Name="Button_CreateDbConnectionTemplate"
+                    Content="Шаблон подключения"
+                    Click="Button_CreateDbConnectionTemplate_Click"/>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Vertical">
+            <Label x:Name="Label_StatusBar" Content="Status: " />
+        </StackPanel>
+        
+        <Grid x:Name="Grid_Body"/>
+    </DockPanel>
+</Window>
